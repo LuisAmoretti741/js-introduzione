@@ -216,9 +216,9 @@ topolino++;
 // }
 // 9) usando un ciclo logga i numeri da 1 a 100 mettendo un asterisco vicino ai quadrati perfetti
 // for (let i = 1; i <= 100; i++) {
-//   const quadatti = Math.sqrt(i);
+//   const squareRoot = Math.sqrt(i);
   
-//   if (Number.isInteger(quadatti)) {
+//   if (Number.isInteger(squareRoot)) {
 //     console.log(i + " *");
 //   } else {
 //     console.log(i);
@@ -228,8 +228,8 @@ topolino++;
 // const numero = prompt('Inserisci un numero:');
 // const numeroConverted = Number(numero);
 // for (let i = numeroConverted; i >= 0; i--) {
-//     console.log(i);
-// }
+//      console.log(i);
+// }   
 
 // 11) chiedi all'utente due numeri e logga tutti i numeri pari compresi tra i numeri forniti dall'utente
 // const numero1 = prompt('Inserisci il primo numero:');
@@ -238,9 +238,17 @@ topolino++;
 // const numero2 = prompt('Inserisci il secondo numero:');
 // const numeroConverted2 = Number(numero2);
 
-// for (let i = numeroConverted1; i <= numeroConverted2; i++) {
-//     if (i % 2 === 0) {
+// if (numeroConverted1 < numeroConverted2) {
+//     for (let i = numeroConverted1; i <= numeroConverted2; i++) {
+//         if (i % 2 === 0) {
 //         console.log(i);
+//         }
+//     }
+// } else {
+//     for (let i = numeroConverted1; i >= numeroConverted2; i--) {    
+//         if (i % 2 === 0) {
+//             console.log(i);
+//         }
 //     }
 // }
 
@@ -248,6 +256,6 @@ topolino++;
 // const age = prompt('Quanti anni hai?');
 // const ageConverted = Number(age);
 
-// const vissuto = ageConverted * 8766;
+// const vissuto = ageConverted * 365 * 24;
 
-// alert('Hai vissuto ' + vissuto);
+// alert('Hai vissuto ' + vissuto + ' ore');
