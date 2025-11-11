@@ -1132,9 +1132,66 @@ const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
 //56) Scrivi una funzione che, dato un array di numeri, crei un array di stringhe di
 //cancelletti lunga quanto il numero originale
 // [3, 4, 1, 0] -> ['###', '####', '#', '']
+const numbers2 = [3, 2, 4, 1, 0, 5];
+
+// function hashArray(nbrArray) {
+//     const newArray = [];
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = '#'.repeat(nbrArray[i]);
+//         newArray.push(element);
+//     }
+//     return newArray;
+// }
+
+// console.log(hashArray(numbers2));
+
+// ///=============================================
+
+// function highMap(nbrArray, transformFunction) {
+//     let newArray = [];
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         const newElement = transformFunction(element, i);
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+
+// function hashArray(nbrArray) {
+//     return nbrArray.length = '#'.repeat(nbrArray);
+// }
+
+// console.log(highMap(numbers2, hashArray));
+// console.log(highMap(numbers2, (nbrArray) => nbrArray.length = '#'.repeat(nbrArray)));
+// console.log(numbers2.map((nbrArray) => nbrArray.length = '#'.repeat(nbrArray)));
 
 // reduce
 //57) Scrivi una funzione che, dato un array di numeri, li moltiplichi tutti tra loro
+
+function multiplyNumbers(nbrArray) {
+    let total = 1;
+
+    for (let i = 0; i < nbrArray.length; i++) {
+        total *= nbrArray[i];
+    }
+    return total;
+}
+
+console.log(multiplyNumbers(numberArray));
+
+// ///=============================================
+
+function highReduce(array, reduceFunction, startingValue) {
+    let accumulator = startingValue;
+    for (let i = 0; i < array.length; i++) {
+        const current = array[i];
+        accumulator = reduceFunction(accumulator, current, i);
+    }
+    return accumulator;
+}
+
+console.log(highReduce(numberArray, (acc, cur) => acc * cur, 1));
+console.log(numberArray.reduce((acc, cur) => acc * cur, 1));
 
 //58) Scrivi una funzione che, dato un array di stringhe, crei una stringa composta 
 // dalle prime tre lettere delle strighe originarie
