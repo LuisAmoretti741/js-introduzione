@@ -173,3 +173,54 @@ console.log(testArray.map((str) => str.toUpperCase()));
 
 console.log(highMap(numbers, (nbr, i) => nbr * i));
 console.log(numbers.map((nbr, i) => nbr * i));
+
+
+/// REDUCE
+function sumAll(nbrArray) {
+    let sum = 0;
+    for (let i = 0; i < nbrArray.length; i++) {
+        const nbr = nbrArray[i];
+        sum = sum + nbr;
+    }
+    return sum;
+}
+
+console.log(sumAll(numbers));
+
+function stringWithFirstChars(strArray) {
+    let newString = '';
+    for (let i = 0; i < strArray.length; i++) {
+        const char = strArray[i];
+
+        const firstChar = char[0];
+        newString = newString + firstChar;
+    }
+    return newString;
+}
+
+console.log(stringWithFirstChars(testArray));
+
+function highReduce(array, reduceFunction, startingValue) {
+    let accumulator = startingValue;
+    for (let i = 0; i < array.length; i++) {
+        const current = array[i];
+        accumulator = reduceFunction(accumulator, current, i);
+    }
+    return accumulator;
+}
+
+console.log(highReduce(numbers, (acc, cur) => acc + cur, 0));
+console.log(numbers.reduce((acc, cur) => acc + cur, 0));
+
+function sumFirstChar(acc, cur) {
+    const firstChar = cur[0];
+    return acc + firstChar;
+}
+
+console.log(highReduce(testArray, sumFirstChar, ''));
+console.log(testArray.reduce(sumFirstChar, ''));
+console.log(testArray.reduce((acc, cur) => acc + cur[0], ''));
+
+
+
+
