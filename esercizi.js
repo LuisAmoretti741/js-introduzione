@@ -867,52 +867,52 @@
 
 // console.log(trovaLunghezzeParola(parole));
 
-function highFilter(array, conditionFunction){
+// function highFilter(array, conditionFunction){
 
-    const newArray = []
+//     const newArray = []
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
 
-        if (conditionFunction(element)) {
-            newArray.push(element);
-        }
+//         if (conditionFunction(element)) {
+//             newArray.push(element);
+//         }
         
-    }
+//     }
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-function highMap(array, transformFunction){
+// function highMap(array, transformFunction){
 
-    const newArray = [];
+//     const newArray = [];
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        const element = array[i];
+//         const element = array[i];
 
-        const newElement = transformFunction(element, i);
+//         const newElement = transformFunction(element, i);
 
-        newArray.push(newElement); 
-    }
-    return newArray;
-}
+//         newArray.push(newElement); 
+//     }
+//     return newArray;
+// }
 
 
-function highReduce(array, reduceFunction, startingValue){
+// function highReduce(array, reduceFunction, startingValue){
 
-    let accumulator = startingValue;
+//     let accumulator = startingValue;
 
-    for (let i = 0; i < array.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
 
-        const current = array[i];
+//         const current = array[i];
 
-        accumulator = reduceFunction(accumulator, current, i)
+//         accumulator = reduceFunction(accumulator, current, i)
         
-    }
+//     }
 
-    return accumulator;
-}
+//     return accumulator;
+// }
 
 const numberArray = [2, 4, 8, 112, 156, 22, -61.5, 6, -11.5, 4, 44, 8, 4];
 
@@ -928,18 +928,206 @@ const stringArray = ['pizza', 'spaghetti', 'frittata', 'lasagne'];
 //51) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // maggiori di 100
 
+// function filterOver100(nbrArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         if (nbrArray[i] > 100) {
+//             newArray.push(nbrArray[i])
+//         }
+//     }
+//     return newArray;
+// }
+
+// console.log(filterOver100(numberArray));
+
+/////=============================================
+
+// function highFilter(nbrArray, conditionFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         if (conditionFunction(element)) {
+//             newArray.push(element);
+//         }
+//     }
+
+//     return newArray;
+// }
+
+// function filterOver100(nbrArray) {
+//     if (nbrArray > 100) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(highFilter(numberArray, filterOver100));
+// console.log(highFilter(numberArray, (nbrArray) => nbrArray > 100 ));
+// console.log(numberArray.filter((nbrArray) => nbrArray > 100));
+
 //52) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
 // che finiscono con 'a'
 
+// function filterEndWithA(strArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < strArray.length; i++) {
+//         const strElement = strArray[i];
+//         if (strElement[strElement.length - 1] === 'a') {
+//             newArray.push(strElement)
+//         }
+//     }
+//     return newArray;
+// }
+
+// console.log(filterEndWithA(stringArray));
+
+/////=============================================
+
+// function highFilter(strArray, conditionFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < strArray.length; i++) {
+//         const element = strArray[i];
+//         if (conditionFunction(element)) {
+//             newArray.push(element);
+//         }
+//     }
+
+//     return newArray;
+// }
+
+// function filterEndWithA(strArray) {
+//     const lastChar = strArray[strArray.length - 1];
+//     if (lastChar === 'a') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(highFilter(stringArray, filterEndWithA));
+// console.log(highFilter(stringArray, (strArray) => strArray[strArray.length - 1] === 'a'));
+// console.log(stringArray.filter((strArray) => strArray[strArray.length - 1] === 'a'));
+
 //53) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // divisibili per 3
+
+// function filterDivisibleBy3(nbrArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         if (nbrArray[i] % 3 === 0) {
+//             newArray.push(nbrArray[i])
+//         }
+//     }
+//     return newArray;
+// }
+
+// console.log(filterDivisibleBy3(numberArray));
+
+/////=============================================
+
+// function highFilter(nbrArray, conditionFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         if (conditionFunction(element)) {
+//             newArray.push(element);
+//         }
+//     }
+
+//     return newArray;
+// }
+
+
+// function filterDivisibleBy3(nbrArray) {
+//     if (nbrArray % 3 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// console.log(highFilter(numberArray, filterDivisibleBy3));
+// console.log(highFilter(numberArray, (nbrArray) => nbrArray % 3 === 0));
+// console.log(numberArray.filter((nbrArray) => nbrArray % 3 === 0));
 
 // map
 //54) Scrivi una funzione che, dato un array di numeri, crei un array con tutti i numeri
 // elevati al cubo
 
+// function powNumbersArray(nbrArray) {
+//     const newArray = [];
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         newArray.push(nbrArray[i] ** 3);
+//     }
+//     return newArray;
+// }
+
+// console.log(powNumbersArray(numberArray));
+
+///=============================================
+
+// function highMap(nbrArray, transformFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < nbrArray.length; i++) {
+//         const element = nbrArray[i];
+//         const newElement = transformFunction(element, i);
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+
+// function powNumbersArray(nbrArray) {
+//     return nbrArray ** 3;
+// }
+
+// console.log(highMap(numberArray, powNumbersArray));
+// console.log(highMap(numberArray, (nbrArray) => nbrArray ** 3));
+// console.log(numberArray.map((nbrArray) => nbrArray ** 3));
+
 //55) Scrivi una funzione che, dato un array di stringhe, crei un array con tutte le stringhe 
 // con la prima lettera maiuscola
+
+// function filterFirstUpper(strArray) {
+//     const newArray = [];
+
+//     for (let i = 0; i < strArray.length; i++) {
+//         const strElement = strArray[i];
+//         const strElementUpper = strElement.charAt(0).toUpperCase() + strElement.slice(1);
+//         newArray.push(strElementUpper);
+//     }
+//     return newArray;
+// }
+
+// console.log(filterFirstUpper(stringArray));
+
+// ///=============================================
+
+// function highMap(strArray, transformFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < strArray.length; i++) {
+//         const element = strArray[i];
+//         const newElement = transformFunction(element, i);
+//         newArray.push(newElement);
+//     }
+//     return newArray;
+// }
+
+// function filterFirstUpper(strArray) {
+//     return highMap(strArray, (str) => str.charAt(0).toUpperCase() + str.slice(1));
+// }
+
+// console.log(highMap(stringArray, filterFirstUpper));
+// console.log(highMap(stringArray, (str) => str.charAt(0).toUpperCase() + str.slice(1)));
+// console.log(stringArray.map((str) => str.charAt(0).toUpperCase() + str.slice(1)));
 
 //56) Scrivi una funzione che, dato un array di numeri, crei un array di stringhe di
 //cancelletti lunga quanto il numero originale
