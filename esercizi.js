@@ -1369,60 +1369,88 @@ const numbers2 = [3, 2, 4, 1, 0, -5];
 // console.log(stringArray.reduce(compareTnumber, ''));
 
 const prodotti = [
-  { id: 1, nome: "Mela", categoria: "Frutta", prezzo: 1.20, scadenza: "2025-11-15", peso: 0.2, biologico: true },
-  { id: 2, nome: "Pasta", categoria: "Pasta e Riso", prezzo: 0.80, scadenza: "2026-05-10", peso: 0.5, biologico: false },
-  { id: 3, nome: "Latte", categoria: "Latticini", prezzo: 1.10, scadenza: "2025-11-14", peso: 1, biologico: true },
-  { id: 4, nome: "Pane", categoria: "Pane e Sostituti", prezzo: 1.50, scadenza: "2025-11-12", peso: 0.3, biologico: false },
-  { id: 5, nome: "Yogurt", categoria: "Latticini", prezzo: 0.60, scadenza: "2025-11-20", peso: 0.125, biologico: true },
-  { id: 6, nome: "Riso", categoria: "Pasta e Riso", prezzo: 1.30, scadenza: "2027-02-20", peso: 1, biologico: false },
-  { id: 7, nome: "Pomodoro", categoria: "Ortaggi", prezzo: 0.90, scadenza: "2025-11-18", peso: 0.3, biologico: true },
-  { id: 8, nome: "Acqua", categoria: "Bevande", prezzo: 0.30, scadenza: "2026-12-31", peso: 1.5, biologico: false },
-  { id: 9, nome: "Biscotti", categoria: "Dolci", prezzo: 2.00, scadenza: "2026-03-01", peso: 0.2, biologico: false },
-  { id: 10, nome: "Uova", categoria: "Uova", prezzo: 2.50, scadenza: "2025-11-30", peso: 0.6, biologico: true },
-  { id: 11, nome: "Caffè", categoria: "Bevande", prezzo: 3.00, scadenza: "2026-10-01", peso: 0.25, biologico: false },
-  { id: 12, nome: "Formaggio", categoria: "Latticini", prezzo: 4.50, scadenza: "2025-12-10", peso: 0.2, biologico: true },
-  { id: 13, nome: "Carote", categoria: "Ortaggi", prezzo: 0.70, scadenza: "2025-11-25", peso: 1, biologico: true },
-  { id: 14, nome: "Tonno", categoria: "Conserve", prezzo: 1.80, scadenza: "2027-01-15", peso: 0.16, biologico: false },
-  { id: 15, nome: "Cioccolato", categoria: "Dolci", prezzo: 1.70, scadenza: "2026-04-30", peso: 0.1, biologico: false }
+    { id: 1, nome: "Mela", categoria: "Frutta", prezzo: 1.20, scadenza: "2025-11-15", peso: 0.2, biologico: true },
+    { id: 2, nome: "Pasta", categoria: "Pasta e Riso", prezzo: 0.80, scadenza: "2026-05-10", peso: 0.5, biologico: false },
+    { id: 3, nome: "Latte", categoria: "Latticini", prezzo: 1.10, scadenza: "2025-11-14", peso: 1, biologico: true },
+    { id: 4, nome: "Pane", categoria: "Pane e Sostituti", prezzo: 1.50, scadenza: "2025-11-12", peso: 0.3, biologico: false },
+    { id: 5, nome: "Yogurt", categoria: "Latticini", prezzo: 0.60, scadenza: "2025-11-20", peso: 0.125, biologico: true },
+    { id: 6, nome: "Riso", categoria: "Pasta e Riso", prezzo: 1.30, scadenza: "2027-02-20", peso: 1, biologico: false },
+    { id: 7, nome: "Pomodoro", categoria: "Ortaggi", prezzo: 0.90, scadenza: "2025-11-18", peso: 0.3, biologico: true },
+    { id: 8, nome: "Acqua", categoria: "Bevande", prezzo: 0.30, scadenza: "2026-12-31", peso: 1.5, biologico: false },
+    { id: 9, nome: "Biscotti", categoria: "Dolci", prezzo: 2.00, scadenza: "2026-03-01", peso: 0.2, biologico: false },
+    { id: 10, nome: "Uova", categoria: "Uova", prezzo: 2.50, scadenza: "2025-11-30", peso: 0.6, biologico: true },
+    { id: 11, nome: "Caffè", categoria: "Bevande", prezzo: 3.00, scadenza: "2026-10-01", peso: 0.25, biologico: false },
+    { id: 12, nome: "Formaggio", categoria: "Latticini", prezzo: 4.50, scadenza: "2025-12-10", peso: 0.2, biologico: true },
+    { id: 13, nome: "Carote", categoria: "Ortaggi", prezzo: 0.70, scadenza: "2025-11-25", peso: 1, biologico: true },
+    { id: 14, nome: "Tonno", categoria: "Conserve", prezzo: 1.80, scadenza: "2027-01-15", peso: 0.16, biologico: false },
+    { id: 15, nome: "Cioccolato", categoria: "Dolci", prezzo: 1.70, scadenza: "2026-04-30", peso: 0.1, biologico: false }
 ];
 
 
 //61) mettere in ordine l'array di prodotti per prezzo dal più costoso in giù
 
-function compareProductsByPrecie(prod1, prod2) {
-    return prod2.prezzo - prod1.prezzo;
-}
+// function compareProductsByPrecie(prod1, prod2) {
+//     return prod2.prezzo - prod1.prezzo;
+// }
 
-prodotti.sort(compareProductsByPrecie);
-console.log(prodotti);
+// prodotti.sort(compareProductsByPrecie);
+// console.log(prodotti);
 
 //62) mettere in ordine per nome discendente
 
-function compareProductsByNames(prod1, prod2) {
-    return prod1.nome.localeCompare(prod2.nome);
-}
+// function compareProductsByNames(prod1, prod2) {
+//     return prod2.nome.localeCompare(prod1.nome);
+// }
 
-prodotti.sort(compareProductsByNames);
-console.log(prodotti);
+// prodotti.sort(compareProductsByNames);
+// console.log(prodotti);
 
 //63) mettere in ordine per categoria ascendente, e se uguali per peso dal più pesante
 
-function compareProductsByCategoryAndWeight(prod1, prod2) {
-    if (prod1.peso > prod2.peso) {
-        return 1;
-    } else if (prod2.peso > prod1.peso) {
-        return -1;
-    } else {
-        return prod2.categoria.localeCompare(prod1.categoria);
-    }
-}
+// function compareProductsByCategoryAndWeight(prod1, prod2) {
+//     //ordinare per categoria di maniera ascendente.
+//     const categoriaOrder = prod1.categoria.localeCompare(prod2.categoria);
+    
+//     if (categoriaOrder !== 0) {
+//         return categoriaOrder;
+//     }
+//     return prod2.peso - prod1.peso;
+// }
 
-prodotti.sort(compareProductsByCategoryAndWeight);
-console.log(prodotti);
-
+// prodotti.sort(compareProductsByCategoryAndWeight);
+// console.log(prodotti);
 
 //64) mettere in ordine per anno di scadenza dal più vicino
+
+// function compareProductsByExpirationDate(prod1, prod2) {
+//     const data1 = new Date(prod1.scadenza);
+//     const data2 = new Date(prod2.scadenza);
+//     // new Datea transforma la str in una data
+
+//     return data1 - data2;
+// }
+
+// prodotti.sort(compareProductsByExpirationDate);
+// console.log(prodotti);
+
 //65) mettere in ordine per categoria discendente, se uguali per peso dal più piccolo, se uguali per nome ascendente
+
+// function compareProductsByCategoryAndWeight(prod1, prod2) {
+//     const categoriaOrder = prod2.categoria.localeCompare(prod1.categoria);
+//     if (categoriaOrder !== 0) {
+//         return categoriaOrder;
+//     }
+
+//     const pesoOrder = prod1.peso - prod2.peso;
+//     if (pesoOrder !==0) {
+//         return pesoOrder;
+//     }
+
+//     return prod1.nome.localeCompare(prod2.nome);
+// }
+
+// prodotti.sort(compareProductsByCategoryAndWeight);
+// console.log(prodotti);
 
 
 
