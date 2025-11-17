@@ -237,7 +237,7 @@ const students = [
     'leonardo'
 ];
 
-const numbers = [20, 15, 124, 36, 9, 39, 74, 175, 200, 1, 0, 55];
+const numbers1 = [20, 15, 124, 36, 9, 39, 74, 175, 200, 1, 0, 55];
 
 // for (let i = 0; i < students.length; i++) {
 //     const student = students[i];
@@ -337,28 +337,49 @@ const cars = [
 ]
 
 
-function compareCarsBySpeedDescending(car1, car2) {
-    return car2.maxSpeed - car1.maxSpeed;
-}
+// function compareCarsBySpeedDescending(car1, car2) {
+//     return car2.maxSpeed - car1.maxSpeed;
+// }
 
-function compareCarsByModelAscending(car1, car2) {
-    return car1.model.localeCompare(car2.model);
-}
+// function compareCarsByModelAscending(car1, car2) {
+//     return car1.model.localeCompare(car2.model);
+// }
 
-function compareCarsBySpeedDescendingAndModel(car1, car2) {
-    if (car1.maxSpeed > car2.maxSpeed) {
-        return 1;
-    } else if (car2.maxSpeed > car1.maxSpeed) {
-        return -1;
-    } else {
-        return car1.model.localeCompare(car2.model);
-    }
-}
+// function compareCarsBySpeedDescendingAndModel(car1, car2) {
+//     if (car1.maxSpeed > car2.maxSpeed) {
+//         return 1;
+//     } else if (car2.maxSpeed > car1.maxSpeed) {
+//         return -1;
+//     } else {
+//         return car1.model.localeCompare(car2.model);
+//     }
+// }
 
 // cars.sort(compareCarsBySpeedDescending);
 // cars.sort(compareCarsByModelAscending);
 // cars.sort(compareCarsBySpeedDescendingAndModel);
-console.log(cars);
+// console.log(cars);
+
+//SORTIN NOT IN PLACE
+
+const numbers2 = [200, 2, -20, 12, 5, 1000];
+const doubleNumbers = numbers2.map((n) => n * 2);
+
+console.log(doubleNumbers);
+console.log(numbers2);
+
+numbers2.sort((n1, n2) => n1 - n2);
+
+function correctSort(array, compareFn) {
+    const clone = [...array];
+    clone.sort(compareFn);
+    return clone;
+}
+
+const sortedNumbers = correctSort(numbers2, (n1, n2) => n1 - n2);
+console.log(sortedNumbers);
+
+
 
 
 
